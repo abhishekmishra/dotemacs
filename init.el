@@ -1,27 +1,29 @@
 ;;emacs load path
 
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; load emacs 24's package system. Add MELPA repository.
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (add-to-list
-   'package-archives
-   ;; '("melpa" . "http://stable.melpa.org/packages/") ; many packages won't show if using stable
-   '("melpa" . "http://melpa.milkbox.net/packages/")
-   t))
-
-
 (setq load-path (cons "~/emacs" load-path))
+(setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
 
 ;;user customizations
 
 ;;modules
-(require 'quack)
+;(require 'quack)
 
 ;;theme
 (load-theme 'manoj-dark)
@@ -103,9 +105,10 @@ print a message in the minibuffer with the result."
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-
 ;; macos keybindings
 ;; see https://www.emacswiki.org/emacs/EmacsForMacOS#toc26
 ;; and http://lists.gnu.org/archive/html/help-gnu-emacs/2011-02/msg00019.html
 (setq mac-right-option-modifier 'control)
 (setq mac-right-command-modifier 'meta)
+
+(pdf-tools-install)
