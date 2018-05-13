@@ -27,7 +27,7 @@
 
 ;;theme
 ;;(load-theme 'manoj-dark)
-(load-theme 'gruvbox)
+(load-theme 'gruvbox t)
 ;;(load-theme 'zenburn)
 ;;(load-theme 'solarized-dark)
 ;;(load-theme 'solarized-light)
