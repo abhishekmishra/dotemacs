@@ -41,6 +41,20 @@
 (use-package magit
   :ensure t)
 
+(use-package ess
+  :ensure t)
+
+(use-package ess-view
+  :ensure t)
+
+(use-package google-this
+  :ensure t
+  :init
+  (google-this-mode 1))
+
+(use-package google-maps
+  :ensure t)
+
 (setq load-path (cons "~/emacs" load-path))
 (setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
 
