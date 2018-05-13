@@ -99,9 +99,6 @@
    (quote
 <<<<<<< HEAD
     (magit csv-mode gruvbox-theme zenburn-theme helm-system-packages solarized-theme org-edna)))
-=======
-    (gruvbox-theme zenburn-theme helm-system-packages solarized-theme org-edna)))
->>>>>>> 58ae5b44875bf96722069302f537e89772ee34ef
  '(quack-default-program "racket")
  '(quack-programs
    (quote
