@@ -17,6 +17,24 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; to load use-package
+;; use-package is used to declaratively specified a
+;; package to be used, so that it is installed
+;; automatically at startup if it does not exist
+;;
+;; https://emacs.stackexchange.com/questions/28932/how-to-automatically-install-all-packages-loaded-by-my-emacs-file-in-the-minimu
+
+(dolist (package '(use-package))
+   (unless (package-installed-p package)
+       (package-install package)))
+
+;; packages needed
+(use-package gruvbox-theme
+  :ensure t)
+
+(use-package pdf-tools
+  :ensure t)
+
 (setq load-path (cons "~/emacs" load-path))
 (setq load-path (cons "/usr/local/share/emacs/site-lisp" load-path))
 
