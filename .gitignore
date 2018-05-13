@@ -1,5 +1,6 @@
 *.elc
 *.tar.xz
+*.data
 *~
 /aria2-controller.eieio
 /auto-save-list/
