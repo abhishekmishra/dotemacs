@@ -47,14 +47,6 @@
 (use-package ess-view
   :ensure t)
 
-(use-package google-this
-  :ensure t
-  :init
-  (google-this-mode 1))
-
-(use-package google-maps
-  :ensure t)
-
 (use-package elfeed
   :ensure t)
 
@@ -77,8 +69,8 @@
 ;(require 'quack)
 
 ;;theme
-;;(load-theme 'manoj-dark)
-(load-theme 'gruvbox t)
+(load-theme 'manoj-dark)
+;;(load-theme 'gruvbox t)
 ;;(load-theme 'zenburn)
 ;;(load-theme 'solarized-dark)
 ;;(load-theme 'solarized-light)
@@ -124,7 +116,7 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "6ac7c0f959f0d7853915012e78ff70150bfbe2a69a1b703c3ac4184f9ae3ae02" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(package-selected-packages
    (quote
-    (ggtags elfeed-org elfeed-goodies elfeed use-package pdf-tools magit gruvbox-theme google-this google-maps ess-view csv-mode)))
+    (ggtags elfeed-org elfeed-goodies elfeed use-package pdf-tools magit gruvbox-theme ess-view csv-mode)))
  '(quack-default-program "racket")
  '(quack-programs
    (quote
