@@ -171,7 +171,7 @@ print a message in the minibuffer with the result."
 
 (setq am-org-directory (concat am-home-directory "/Documents/notes"))
 
-(setq org-default-notes-file (concat am-org-directory "/journal-2018.org"))
+(setq org-default-notes-file (concat am-org-directory "/journal-2019.org"))
 
 ;; macos keybindings
 ;; see https://www.emacswiki.org/emacs/EmacsForMacOS#toc26
