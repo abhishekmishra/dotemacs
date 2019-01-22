@@ -161,6 +161,18 @@ print a message in the minibuffer with the result."
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+;; see for default org mode file
+
+(if (eq system-type 'gnu/linux)
+    (setq am-home-directory "/home/abhishek"))
+
+(if (eq system-type 'darwin)
+    (setq am-home-directory  "/Users/abhishekmishra"))
+
+(setq am-org-directory (concat am-home-directory "/Documents/notes"))
+
+(setq org-default-notes-file (concat am-org-directory "/journal-2018.org"))
+
 ;; macos keybindings
 ;; see https://www.emacswiki.org/emacs/EmacsForMacOS#toc26
 ;; and http://lists.gnu.org/archive/html/help-gnu-emacs/2011-02/msg00019.html
