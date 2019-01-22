@@ -61,6 +61,9 @@
 (use-package elfeed-goodies
   :ensure t)
 
+(use-package ggtags
+  :ensure t)
+
 ;;commented out due to build errors on fedora
 ;;(use-package elfeed-org
 ;;  :ensure t)
@@ -84,7 +87,7 @@
     (set-default-font "Consolas-10"))
 
 (if (eq system-type 'gnu/linux)
-    (set-default-font "Inconsolata-12"))
+    (set-default-font "Terminus 10"))
 
 (if (eq system-type 'darwin)
     (set-default-font "Menlo-14"))
@@ -105,7 +108,7 @@
 (menu-bar-mode 0)
 
 ;; Set font size to 100
-(set-face-attribute 'default (selected-frame) :height 140)
+(set-face-attribute 'default (selected-frame) :height 100)
 
 ;; c programming 
 (setq c-default-style "linux"
@@ -121,7 +124,7 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "6ac7c0f959f0d7853915012e78ff70150bfbe2a69a1b703c3ac4184f9ae3ae02" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default)))
  '(package-selected-packages
    (quote
-    (elfeed-org elfeed-goodies elfeed use-package pdf-tools magit gruvbox-theme google-this google-maps ess-view csv-mode)))
+    (ggtags elfeed-org elfeed-goodies elfeed use-package pdf-tools magit gruvbox-theme google-this google-maps ess-view csv-mode)))
  '(quack-default-program "racket")
  '(quack-programs
    (quote
