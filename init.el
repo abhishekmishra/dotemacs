@@ -29,8 +29,8 @@
        (package-install package)))
 
 ;; packages needed
-(use-package gruvbox-theme
-  :ensure t)
+;;(use-package gruvbox-theme
+;;  :ensure t)
 
 (use-package pdf-tools
   :ensure t)
