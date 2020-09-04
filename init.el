@@ -158,4 +158,4 @@ print a message in the minibuffer with the result."
 (setq mac-right-option-modifier 'control)
 (setq mac-right-command-modifier 'meta)
 
-(pdf-tools-install)
+;;(pdf-tools-install)
