@@ -19,8 +19,8 @@
        (package-install package)))
 
 ;; packages needed
-(use-package gruvbox-theme
-  :ensure t)
+;;(use-package gruvbox-theme
+;;  :ensure t)
 
 (use-package pdf-tools
   :ensure t)
@@ -37,18 +37,13 @@
 (use-package ess-view
   :ensure t)
 
-(use-package google-this
-  :ensure t
-  :init
-  (google-this-mode 1))
-
-(use-package google-maps
-  :ensure t)
-
 (use-package elfeed
   :ensure t)
 
 (use-package elfeed-goodies
+  :ensure t)
+
+(use-package ggtags
   :ensure t)
 
 ;;commented out due to build errors on fedora
@@ -64,6 +59,10 @@
 
 ;;theme
 (load-theme 'manoj-dark)
+;;(load-theme 'gruvbox t)
+;;(load-theme 'zenburn)
+;;(load-theme 'solarized-dark)
+;;(load-theme 'solarized-light)
 
 (if (eq system-type 'windows-nt)
     (set-frame-font "Consolas-10"))
@@ -90,7 +89,7 @@
 (menu-bar-mode 0)
 
 ;; Set font size to 100
-(set-face-attribute 'default (selected-frame) :height 140)
+(set-face-attribute 'default (selected-frame) :height 100)
 
 ;; c programming 
 (setq c-default-style "linux"
@@ -104,7 +103,8 @@
  '(custom-safe-themes
    '("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" "6ac7c0f959f0d7853915012e78ff70150bfbe2a69a1b703c3ac4184f9ae3ae02" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" default))
  '(package-selected-packages
-   '(elfeed-org elfeed-goodies elfeed use-package pdf-tools magit gruvbox-theme google-this google-maps ess-view csv-mode))
+   (quote
+    (ggtags elfeed-org elfeed-goodies elfeed use-package pdf-tools magit gruvbox-theme ess-view csv-mode)))
  '(quack-default-program "racket")
  '(quack-programs
    '("racket" "bigloo" "csi" "csi -hygienic" "gosh" "gsi" "gsi ~~/syntax-case.scm -" "guile" "kawa" "mit-scheme" "mred -z" "mzscheme" "mzscheme -il r6rs" "mzscheme -il typed-scheme" "mzscheme -M errortrace" "mzscheme3m" "mzschemecgc" "rs" "scheme" "scheme48" "scsh" "sisc" "stklos" "sxi")))
@@ -150,7 +150,7 @@ print a message in the minibuffer with the result."
 
 (setq am-org-directory (concat am-home-directory "/Documents/notes"))
 
-(setq org-default-notes-file (concat am-org-directory "/journal-2018.org"))
+(setq org-default-notes-file (concat am-org-directory "/journal-2019.org"))
 
 ;; macos keybindings
 ;; see https://www.emacswiki.org/emacs/EmacsForMacOS#toc26

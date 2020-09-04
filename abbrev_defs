@@ -69,8 +69,6 @@
 
 (define-abbrev-table 'fundamental-mode-abbrev-table '())
 
-(define-abbrev-table 'git-rebase-mode-abbrev-table '())
-
 (define-abbrev-table 'global-abbrev-table '())
 
 (define-abbrev-table 'help-mode-abbrev-table '())
