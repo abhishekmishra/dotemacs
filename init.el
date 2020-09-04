@@ -89,7 +89,7 @@
 (menu-bar-mode 1)
 
 ;; Set font size to 100
-(set-face-attribute 'default (selected-frame) :height 100)
+(set-face-attribute 'default (selected-frame) :height 140)
 
 ;; c programming 
 (setq c-default-style "linux"
