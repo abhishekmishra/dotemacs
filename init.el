@@ -64,7 +64,7 @@
 ;;(load-theme 'manoj-dark)
 ;;(load-theme 'gruvbox t)
 ;;(load-theme 'zenburn)
-(load-theme 'solarized-dark)
+(load-theme 'solarized-dark t)
 ;;(load-theme 'solarized-light)
 
 (if (eq system-type 'windows-nt)
