@@ -2,7 +2,7 @@
 *.tar.xz
 *.data
 *~
-#*
+\#*
 /aria2-controller.eieio
 /auto-save-list/
 /autoloads.el
